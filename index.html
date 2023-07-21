@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="color: blue; align-items: center">Function Handson</h1>
+    <h3>
+      Q1. Create one function with zero parameter having a console statement
+    </h3>
+    <h4>
+      Ans:
+      <pre>
+            function myf(){
+                console.log("This is the first function with zero parameter")
+            }
+        </pre
+      >
+    </h4>
+    <h3>Q.2)
+      Create one function which takes two values as a parameter and print the
+      sum of them as "Sum of 3, 4 is 7"
+    </h3>
+    <h4>
+      Ans:
+      <pre>
+            function add(a,b){
+                var c=a+b;
+                console.log("sum of" + a + b + "is" + c)
+            }
+            add(3,4)
+        </pre
+      >
+    </h4>
+    <h3>Q3.)Create one arrow function</h3>
+    <h4>
+      Ans:
+      <pre>
+            let func=(y,z)=>{
+                console.log(y * z)
+            }
+            func(10,10)
+        </pre
+      >
+    </h4>
+    <h3>
+      Q.4)
+      <pre>
+        Print output: 
+        var x = 21;
+         var girl = function () 
+         {
+             console.log(x);
+              var x = 20; 
+            };
+             girl ();
+    </pre
+      >
+    </h3>
+    <h4>
+      Ans:
+      <pre>
+ this function will return undefined.
+         <!-- Because here inside a function x is delclared after the execution of function </pre -->
+      >
+    </h4>
+    <h3>
+      xQ.5)
+      <pre>
+        Print output: 
+var x = 21;
+girl ();
+console.log(x)
+function girl() {
+    console.log(x);
+    var x = 20;
+};
+    </pre>
+    </h3>
+    <h4>
+        Ans:
+        undefined
+        <br>
+        21 
+        <!-- <pre>
+           Explanation:When the function is executed,it checks that there's a local variable x is present
+            but doesn't yet declare it.
+            Here iniside the function,the x variable is declared after executing
+            
+        </pre> -->
+    </h4>
+    <h3>Q.6)</h3>
+        <pre>Print output
+
+            var x = 21;
+            a();
+            b();
+            
+              function a() {
+                
+               x = 20;
+              console.log(x);
+            };
+             function b() {
+                
+                x = 40;
+               console.log(x);
+            };</pre>
+            <h4>Ans:
+             function a() console  20 and function b() console 40
+                    
+                
+                <!-- Explanation:When we declare a variable without any keyword,the scope of the variable change to global scope.
+                So here inside the function,the values are assigned to a and b,and executed there itself,so we getting 'a' as 20 and 'b' as 40 -->
+
+            </h4>
+    
+    <h3> Write a function that accepts parameter n and returns factorial of n</h3>
+    <h4>Ans:
+        <pre>
+            function abc(n){
+                if (n === 0 || n === 1)
+                return 1;
+            for (var i = n - 1; i >= 1; i--) {
+                n*= i;
+            }
+            return n;
+            }
+            console.log(abc(13));
+            
+        </pre>
+    </h4>
+    <h2 style="color: blue;">Day 2 </h2>
+    <h3>Q1.) <pre>Guess the Output
+
+        function FindSum(a, b){
+            return a + b;
+        }
+        
+        function DisplayData(data, batch){
+            console.log(`i am from ${data} and My batch is EA${batch}`)
+        }
+        
+        DisplayData("PrepBytes", FindSum(20, 4));
+    </pre>
+        </h3>
+        <h4>Ans: i am from PrepBytes and My batch is EA24</h4>
+        <h3> Q.2)<pre>
+            Guess the output
+
+Abc();
+const Abc = function(){
+    let value = 20;
+    console.log(value);
+}
+</pre></h3>
+<h4>Ans:  ReferenceError: Cannot access 'Abc' before initialization</h4>
+<h3>
+    Q.3)
+    <pre>
+        Guess the output
+
+var a = 10;
+(function (){
+    console.log(a);
+    var a = 20;
+})();
+
+    </pre>
+</h3>
+<h4>Ans: undefined. 
+    value of a is given after console.log in function. so it will not print  a value 
+</h4>
+<h3>Q.4)
+    <pre>"Guess the Output
+        const greet =  function(name){
+            return function(m){   
+                console.log(`Hi!! ${name}, ${m}`);
+            }
+        }
+        const greet_message = greet('EA24');
+        greet_message("Welcome To PrepBytes")</pre>
+</h3>
+<h4>Ans:
+    'Hi!! EA24, Welcome To PrepBytes'
+</h4>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
